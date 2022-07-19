@@ -4,10 +4,17 @@ module.exports = {
   async index(request, response){
     const {page = 1} = request.query;
 
+    const [count] = await connection('incidents').count(); // contador de casos
+
+    
     const incidents = await connection('incidents')
-      .limit(5)
-      .offset((page -1) * 5)
-      .select('*');
+      .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+      .limit(5) // limitando 5 incidentes
+      .offset((page -1) * 5) // paginação
+      .select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.whatsapp', 'ongs.city', 'ongs.uf']);
+
+    response.header('X-Total-Count', count['count(*)']) // mostra total de registros frontend
+
     return response.json(incidents);
   }, 
 
