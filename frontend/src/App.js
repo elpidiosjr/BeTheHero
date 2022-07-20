@@ -1,7 +1,9 @@
 
+//JSX quando html esta em um arquivo javascript = JAVASCRIPT XML
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <h1>Hello OmniStack</h1>
   );
 }
 
