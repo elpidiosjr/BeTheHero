@@ -1,9 +1,11 @@
+import React from "react";
 
-//JSX quando html esta em um arquivo javascript = JAVASCRIPT XML
-
+import Header from "./Header";   
 function App() {
   return (
-    <h1>Hello OmniStack</h1>
+    <Header>
+      Semana OmniStack
+    </Header>
   );
 }
 
