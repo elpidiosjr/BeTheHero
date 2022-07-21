@@ -4,10 +4,12 @@ import Header from "./Header";
 function App() {
   let counter = 0;
 
+
 function increment() {
   counter +=1;
   console.log(counter);
 }
+
 
   return (
     <div>
@@ -16,5 +18,6 @@ function increment() {
     </div>
   );
 }
+
 
 export default App;
