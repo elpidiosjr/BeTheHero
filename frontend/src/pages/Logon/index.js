@@ -14,12 +14,14 @@ export default function Logon() {
 
             <form>
                 <h1>Faça seu logon</h1>
-                <input placehold="Sua ID"  />
-                <button type="submit">Entrar</button>
 
-                <a href="/register"></a>
+                <input placeholder="Sua ID"  />
+                <button className="button" type="submit">Entrar</button>
+
+                <a href="/register">
                 <FiLogIn size={16} color="#E02041" />
                 Não tenho cadastro
+                </a>
             </form>
         </section>
 
