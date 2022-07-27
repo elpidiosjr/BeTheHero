@@ -62,10 +62,10 @@ form input {
     transition: opacity 0.2s;
 }
 
-.back-link {
+.back-link svg{
     margin-right: 8px;
 }
 
-.back-link {
+.back-link:hover{
     opacity: 0.8;
 }
