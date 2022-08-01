@@ -43,7 +43,8 @@ line-height: 32px;
     max-width: 450px;
 }
 
-.register-container .content form input {
+.register-container .content form input,
+.register-container .content form textarea {
     margin-top: 8px;
 }
 

@@ -15,21 +15,17 @@ export default function NewIncident() {
                <h1>Cadastrar novo caso</h1>
                <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
             
-                <Link className='back-link' to="/">
+                <Link className='back-link' to="/profile">
                 <FiArrowLeft size={16} color="#E02041" />
                 Voltar para home
                 </Link>
             </section>
             <form>
                 <input placeholder ="Título do caso" />
-                <input type="email" placeholder="E-mail" />
-                <input placeholder="Whatsapp" />
+                <textarea placeholder="Descrição" />
+                <input placeholder="Valor em reais" />
 
-                <div className="input-group">
-                    <input placeholder="Cidade" />
-                    <input placeholder="UF" style={{ width: 80 }} />
-                </div>
-
+            
                 <button className="button" type="submit">Cadastrar</button>
 
             </form>
