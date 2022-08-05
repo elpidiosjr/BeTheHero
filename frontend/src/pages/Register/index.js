@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import api from '../../services/api';
@@ -12,10 +12,13 @@ export default function Register() {
     const [email, setEmail] = useState('');      
     const [whatsapp, setWhatsapp] = useState('');      
     const [city, setCity] = useState('');      
-    const [uf, setUf] = useState('');      
+    const [uf, setUf] = useState('');   
+    
+    const navigate = useNavigate();
    
     async function handleRegister(e){
         e.preventDefault();
+
         const data = {
             name,
             email,
@@ -28,8 +31,11 @@ export default function Register() {
             const response = await api.post('ongs', data);
 
             alert(`Seu ID de acesso: ${response.data.id}`);
-        } catch(err) {
+
+            navigate('/');
+        } catch (err) {
             alert('Erro no cadastro, tente novamente.');
+            console.log(err)
         }
     }
 
