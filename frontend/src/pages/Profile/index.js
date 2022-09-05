@@ -78,6 +78,7 @@ export default function Profile () {
                                     </button>
                                 </li>
                 ))}
+                
             </ul>
         </div>
     );
